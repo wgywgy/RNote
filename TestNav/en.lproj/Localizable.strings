@@ -1,0 +1,65 @@
+/* 
+  Localizable.strings
+  TestNav
+
+  Created by D on 13-7-22.
+  Copyright (c) 2013年 AlphaStudio. All rights reserved.
+*/
+
+"Choose Password Level" = "Please Choose Password Level";
+"TwoLevel" = "TwoLevel";
+"ThreeLevel" = "ThreeLevel";
+"FourLevel" = "FourLevel";
+"To take pictures" = "To take pictures";
+"Go to library" = "Go to library";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"Next" = "Next";
+"Previous" = "Previous";
+"You don't have a picture" = "You don't have a picture";
+"Set Password" = "Set Password";
+"Take Photo" = "Take Photo";
+"Choose A Gesture" = "Choose A Gesture";
+
+"FirstLevel Password" = "FirstLevel Password";
+"FirstLevel" = "FirstLevel";
+"SecondLevel Password" = "SecondLevel Password";
+"SecondLevel" = "SecondLevel";
+"ThirdLevel Password" = "ThirdLevel Password";
+"ThirdLevel" = "ThirdLevel";
+"FourthLevel Password" = "FourthLevel Password";
+"FourthLevel" = "FourthLevel";
+
+"Are you sure save password" = "Are you sure save password?";
+"Password" = "Password";
+"Wrong Password" = "Wrong Password";
+"apptitle" = "Note";
+"Edit" = "Edit";
+"Done" = "Done";
+"Settings" = "Settings";
+"Delete" = "Delete";
+"Version" = "Version";
+"Choose Themes" = "Choose Themes";
+"About us" = "About Us";
+"Advice Feedback" = "Advice Feedback";
+"Check Update" = "Check Update";
+"Network Connection Error" = "Network Error";
+"Have New Vesion" = "Have New Vesion!\n";
+"Update" = "Update";
+"It is Latest Version" = "It is Latest Version";
+"Theme" = "Theme";
+"AboutUs" = "About Us";
+"Download Font" = "Download Font";
+
+"Lock" = "Lock";
+
+"You do not have notes" = "You do not have notes";
+
+"Search" = "Search";
+
+"notes" = "";
+"At" = "Notes in ";
+"Mail" = "Mail";
+"Message" = "Message";
+
+"DownLoad Font" = "DownLoad Font";

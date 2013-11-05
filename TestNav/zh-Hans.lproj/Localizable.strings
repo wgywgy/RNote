@@ -1,0 +1,78 @@
+/* 
+  Localizable.strings
+  TestNav
+
+  Created by D on 13-7-22.
+  Copyright (c) 2013年 AlphaStudio. All rights reserved.
+*/
+
+"Choose Password Level" = "请选择密码等级";
+"TwoLevel" = "两级";
+"ThreeLevel" = "三级";
+"FourLevel" = "四级";
+"Choose A Gesture" = "选择手势";
+
+"To take pictures" = "去拍照";
+"Go to library" = "去图库";
+"Previous" = "上一步";
+"Next" = "下一步";
+"Cancel" = "取消";
+"Ok" = "确定";
+"You don't have a picture" = "您还没有选择图片";
+"Set Password" = "设置密码";
+"Take Photo" = "选择照片";
+
+"FirstLevel Password" = "第一级 密码";
+"FirstLevel" = "第一级";
+"SecondLevel Password" = "第二级 密码";
+"SecondLevel" = "第二级";
+"ThirdLevel Password" = "第三级 密码";
+"ThirdLevel" = "第三级";
+"FourthLevel Password" = "第四级 密码";
+"FourthLevel" = "第四级";
+
+"Are you sure save password" = "你确定保存密码?";
+"Password" = "密码";
+"Wrong Password" = "密码错误";
+"apptitle" = "笔记";
+"Edit" = "编辑";
+"Done" = "完成";
+"Settings" = "设置";
+"Delete" = "删除";
+"Version" = "版本";
+"Choose Themes" = "选择主题";
+"About us" = "关于我们";
+"Advice Feedback" = "意见反馈";
+"Check Update" = "检查更新";
+"Network Connection Error" = "网络连接错误";
+"Have New Vesion" = "有新版本了!\n";
+"Update" = "更新";
+"It is Latest Version" = "没有新版本";
+"Theme" = "主题";
+
+"Release_to_refresh" = "松开即可刷新...";
+"Last_updated" = "最后更新";
+"Fill in the Contact1" = "填写联系信息";
+"Fill in the Contact2" = "请留下您的QQ，邮箱，电话等联系方式";
+"a_m" = "上午";
+"p_m" = "下午";
+"Send" = "发送";
+"Feedback" = "用户反馈";
+"Close" = "关闭";
+"Your contact information" = "您的联系方式";
+"Pull down to refresh" = "下拉可以刷新...";
+"Loading" = "刷新中";
+
+"AboutUs" = "关于我们";
+"Download Font" = "下载字体";
+"Lock" = "密码锁";
+"Reset Password" = "重设密码";
+
+"You do not have notes" = "您还没有笔记";
+
+"Search" = "搜索";
+"notes" = "的笔记";
+"At" = "在";
+"Mail" = "邮件";
+"Message" = "短信";
+"DownLoad Font" = "下载字体";
