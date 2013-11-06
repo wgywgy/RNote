@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @protocol LTHPasscodeViewControllerDelegate;
 @interface LTHPasscodeViewController : BaseViewController <UITextFieldDelegate> {
