@@ -41,7 +41,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.943454"
+                  timestampString = "405400411.383535"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "383"
@@ -55,7 +55,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.943705"
+                  timestampString = "405400411.383895"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "383"
@@ -69,7 +69,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.943962"
+                  timestampString = "405400411.384203"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "383"
@@ -101,7 +101,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.944184"
+                  timestampString = "405400411.384574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
@@ -115,7 +115,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.944363"
+                  timestampString = "405400411.384901"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
@@ -129,7 +129,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.944636"
+                  timestampString = "405400411.385252"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
@@ -143,7 +143,7 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "405399413.944816"
+                  timestampString = "405400411.38563"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
@@ -161,38 +161,6 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestNav/BaseViewController.m"
-            timestampString = "405399294.738566"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-configureViews"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestNav/BaseViewController.m"
-            timestampString = "405399294.738566"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-configureViews"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -96,18 +96,24 @@
 //        self.edgesForExtendedLayout = UIRectEdgeNone;
 //        [self setNeedsStatusBarAppearanceUpdate];
         if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )
-            self.navigationController.navigationBar.barTintColor =
-//            [UIColor blueNavigationColor];
-            [UIColor colorWithRed:0.048 green:0.539 blue:1.000 alpha:1.0];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+                self.navigationController.navigationBar.barTintColor =
+                [UIColor colorWithRed:0.048 green:0.539 blue:1.000 alpha:1.0];
+            }
+
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
         if ( [[[ThemeManager sharedInstance] theme] isEqual:kThemeRed]) {
-            self.navigationController.navigationBar.barTintColor =
-            [UIColor redColor];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+                self.navigationController.navigationBar.barTintColor =
+                [UIColor redColor];
+            }
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         }
         if ( [[[ThemeManager sharedInstance] theme] isEqual:kThemeBlack]) {
-            self.navigationController.navigationBar.barTintColor =
-            [UIColor blackColor];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+                self.navigationController.navigationBar.barTintColor =
+                [UIColor blackColor];
+            }
         }
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
