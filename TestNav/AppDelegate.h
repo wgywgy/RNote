@@ -10,14 +10,17 @@
 
 extern NSString * const TextDidEdit;
 
-@class ChoosePhotoViewController;
-@class GetPassword1ViewController;
+//@class ChoosePhotoViewController;
+//@class GetPassword1ViewController;
 
+@class LTHPasscodeViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    LTHPasscodeViewController *_passcodeController;
+}
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ChoosePhotoViewController *viewController;
-@property (strong, nonatomic) GetPassword1ViewController *secondviewController;
+//@property (strong, nonatomic) ChoosePhotoViewController *viewController;
+//@property (strong, nonatomic) GetPassword1ViewController *secondviewController;
 
 @end

@@ -153,7 +153,7 @@
                  @"update.png"
                  ];
     
-    UITableViewCell * cell = nil;
+    SwitchCell *cell = nil;
     if (indexPath.row == 0 && indexPath.section == 0) {
         [tableView dequeueReusableCellWithIdentifier:switchCellId];
         if (cell == nil) {
@@ -161,6 +161,7 @@
             [[SwitchCell alloc]initWithStyle:UITableViewCellStyleDefault
                              reuseIdentifier:switchCellId];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.parent = self;
         }
     } else {
         [tableView dequeueReusableCellWithIdentifier:cellId];

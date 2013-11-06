@@ -14,7 +14,7 @@
 #define DIFFPADTOP ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ? 16 : 28)
 
 @implementation SwitchCell
-@synthesize switchView;
+@synthesize switchView, parent;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -52,6 +52,8 @@
 //        cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
 //        self.accessoryView = nil;
     }
+    [LTHPasscodeViewController sharedUser].delegate = self;
+
     return self;
 }
 
@@ -106,10 +108,20 @@
     BOOL isButtonOn = [switchView isOn];
     if (isButtonOn) {
         [defaults setBool:YES forKey:@"usePassword"];
+        [self showLockViewForEnablingPasscode];
     } else {
         [defaults setBool:NO forKey:@"usePassword"];
+        [self showLockViewForTurningPasscodeOff];
     }
     [defaults synchronize];
+}
+
+- (void)showLockViewForEnablingPasscode {
+	[[LTHPasscodeViewController sharedUser] showForEnablingPasscodeInViewController: self.parent];
+}
+
+- (void)showLockViewForTurningPasscodeOff {
+	[[LTHPasscodeViewController sharedUser] showForTurningOffPasscodeInViewController: self.parent];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

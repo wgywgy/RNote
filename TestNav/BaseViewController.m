@@ -83,10 +83,6 @@
 
 #pragma mark - Theme Methods
 
-#warning                                                      \
-You'd better alloc the views, associated with theme changing, \
-in 'initViews' first, then set them in 'configureViews'.
-
 - (void)initViews
 {
     // may do nothing, implement by the subclass

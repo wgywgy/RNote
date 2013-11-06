@@ -11,10 +11,14 @@
 #import "KLSwitch.h"
 
 #import "mySettingsViewController.h"
+#import "LTHPasscodeViewController.h"
 
-@interface SwitchCell : UITableViewCell //<changeSwitchColorDelegate>
+@interface SwitchCell : UITableViewCell <LTHPasscodeViewControllerDelegate>//<changeSwitchColorDelegate>
 {
         CGRect rect_screen;
+        UIViewController *parent;
 }
+
 @property (nonatomic, retain) UISwitch *switchView;
+@property (nonatomic, retain) UIViewController *parent;
 @end

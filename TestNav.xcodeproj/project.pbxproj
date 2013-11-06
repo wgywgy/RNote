@@ -27,6 +27,9 @@
 		03191F1117A8F8180035F9DE /* navigationbar_backup_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0F17A8F8180035F9DE /* navigationbar_backup_default@2x.png */; };
 		031E80B817E04BBF005E9CB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031E80B717E04BBF005E9CB4 /* Images.xcassets */; };
 		031E80BC17E04CF9005E9CB4 /* mainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031E80BB17E04CF9005E9CB4 /* mainViewController.xib */; };
+		0322790D1828E59E00876CF4 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 032279071828E59E00876CF4 /* SFHFKeychainUtils.m */; };
+		0322790E1828E59E00876CF4 /* LTHPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032279091828E59E00876CF4 /* LTHPasscodeViewController.m */; };
+		0322790F1828E59E00876CF4 /* LTHNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0322790B1828E59E00876CF4 /* LTHNavigationViewController.m */; };
 		032C2F2517A7AA7E00A50022 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C2F2417A7AA7E00A50022 /* MobileCoreServices.framework */; };
 		032C2F2717A7AA8800A50022 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C2F2617A7AA8800A50022 /* Security.framework */; };
 		032C2F2917A7AA9A00A50022 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C2F2817A7AA9A00A50022 /* CoreLocation.framework */; };
@@ -220,6 +223,12 @@
 		03191F0F17A8F8180035F9DE /* navigationbar_backup_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_backup_default@2x.png"; sourceTree = "<group>"; };
 		031E80B717E04BBF005E9CB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		031E80BB17E04CF9005E9CB4 /* mainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainViewController.xib; sourceTree = "<group>"; };
+		032279061828E59E00876CF4 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		032279071828E59E00876CF4 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		032279081828E59E00876CF4 /* LTHPasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTHPasscodeViewController.h; sourceTree = "<group>"; };
+		032279091828E59E00876CF4 /* LTHPasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTHPasscodeViewController.m; sourceTree = "<group>"; };
+		0322790A1828E59E00876CF4 /* LTHNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTHNavigationViewController.h; sourceTree = "<group>"; };
+		0322790B1828E59E00876CF4 /* LTHNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTHNavigationViewController.m; sourceTree = "<group>"; };
 		032C2F2417A7AA7E00A50022 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		032C2F2617A7AA8800A50022 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		032C2F2817A7AA9A00A50022 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -511,6 +520,19 @@
 				03F5BFDA179FA1F500B24157 /* BaseViewController.m */,
 			);
 			name = AbstractViews;
+			sourceTree = "<group>";
+		};
+		032279051828E59100876CF4 /* LTHPasscode */ = {
+			isa = PBXGroup;
+			children = (
+				032279061828E59E00876CF4 /* SFHFKeychainUtils.h */,
+				032279071828E59E00876CF4 /* SFHFKeychainUtils.m */,
+				032279081828E59E00876CF4 /* LTHPasscodeViewController.h */,
+				032279091828E59E00876CF4 /* LTHPasscodeViewController.m */,
+				0322790A1828E59E00876CF4 /* LTHNavigationViewController.h */,
+				0322790B1828E59E00876CF4 /* LTHNavigationViewController.m */,
+			);
+			name = LTHPasscode;
 			sourceTree = "<group>";
 		};
 		032C2F2D17A7AB1200A50022 /* AFNetworking */ = {
@@ -813,6 +835,7 @@
 		038FDB311794DC4C00C96F9C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				032279051828E59100876CF4 /* LTHPasscode */,
 				03825B1E17D7061A00BD59AA /* RMEIdeasPullDownControl */,
 				0393C53B17C35CB100F46FA6 /* KLSwitch */,
 				030C24FA17BB106A0003D864 /* KOMovingBar */,
@@ -1186,6 +1209,7 @@
 				03BEE4F9182787F000FF4D3E /* UMFeedbackTableViewCellLeft.m in Sources */,
 				032E74511793D24600CDE2C1 /* AppDelegate.m in Sources */,
 				03BEE4FB182787F000FF4D3E /* UMContactViewController.m in Sources */,
+				0322790E1828E59E00876CF4 /* LTHPasscodeViewController.m in Sources */,
 				032E745A1793D24600CDE2C1 /* ChoosePhotoViewController.m in Sources */,
 				032E0B5717962F6B006711CE /* NSString+Trim.m in Sources */,
 				032E0B5817962F6B006711CE /* UIFont+Alert.m in Sources */,
@@ -1200,6 +1224,7 @@
 				032E0B671798B963006711CE /* UIView+zoom.m in Sources */,
 				0379A87917E94D6C006A5725 /* WHMailActivityItem.m in Sources */,
 				038EF872179912F4001BC629 /* ChoosePos2ViewController.m in Sources */,
+				0322790D1828E59E00876CF4 /* SFHFKeychainUtils.m in Sources */,
 				038EF87717991692001BC629 /* ChoosePos3ViewController.m in Sources */,
 				038EF87C179916B3001BC629 /* ChoosePos4ViewController.m in Sources */,
 				038EF88117991C0E001BC629 /* mainViewController.m in Sources */,
@@ -1225,6 +1250,7 @@
 				03191EF517A8AEAA0035F9DE /* CDITableViewCellDeleteConfirmationControl.m in Sources */,
 				03191EF917A8D0660035F9DE /* SelectThemeViewController.m in Sources */,
 				0379A87817E94D6C006A5725 /* WHMailActivity.m in Sources */,
+				0322790F1828E59E00876CF4 /* LTHNavigationViewController.m in Sources */,
 				03BEE4FA182787F000FF4D3E /* UMFeedbackTableViewCellRight.m in Sources */,
 				03AB713A17A9F6FB005AC88B /* AboutUsViewController.m in Sources */,
 				03AB714417A9FB3D005AC88B /* NotePadViewController.m in Sources */,
@@ -1335,14 +1361,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Spark Inspector.app/Contents/Resources/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestNav/TestNav-Prefix.pch";
 				INFOPLIST_FILE = "TestNav/TestNav-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/TestNav\"",
 					"$(inherited)",
-					"\\\"$(SRCROOT)/TestNav\\\"",
-					"/Users/d/Desktop/TestNav副本\\ 2/TestNav",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1359,9 +1384,8 @@
 				GCC_PREFIX_HEADER = "TestNav/TestNav-Prefix.pch";
 				INFOPLIST_FILE = "TestNav/TestNav-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/TestNav\"",
 					"$(inherited)",
-					"\\\"$(SRCROOT)/TestNav\\\"",
-					"/Users/d/Desktop/TestNav副本\\ 2/TestNav",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
