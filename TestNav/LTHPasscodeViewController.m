@@ -55,7 +55,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 #define kLabelTextColor [UIColor colorWithWhite:0.31f alpha:1.0f]
 #define kPasscodeTextColor [UIColor colorWithWhite:0.31f alpha:1.0f]
 #define kFailedAttemptLabelTextColor [UIColor whiteColor]
-
+#define IOS7DIFFWIDTH ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ? 23 : 43)
 @implementation LTHPasscodeViewController
 
 
@@ -105,9 +105,12 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 
 	self.view.backgroundColor = kBackgroundColor;
 	if (!_beingDisplayedAsLockscreen) {
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel
-																							   target: self
-																							   action: @selector(cancelAndDismissMe)];
+        [self setCancelButton];
+
+
+//		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel
+//																							   target: self
+//																							   action: @selector(cancelAndDismissMe)];
 		self.title = NSLocalizedString(@"Enter Passcode", @"");
 	}
 	
@@ -506,16 +509,56 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: self];
 	[viewController presentViewController: navController animated: YES completion: nil];
 	[self rotateAccordingToStatusBarOrientationAndSupportedOrientations];
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel
-																						   target: self
-																						   action: @selector(cancelAndDismissMe)];
+    [self setCancelButton];
+//	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel
+//																						   target: self
+//																						   action: @selector(cancelAndDismissMe)];
 }
 
+- (void)setCancelButton
+{
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, IOS7DIFFWIDTH, 23)];
+    
+    [backBtn setImage:[UIImage imageNamed:@"btn-close"] forState:UIControlStateNormal];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+    [backBtn addTarget:self
+                action:@selector(cancelAndDismissMe)
+      forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = backItem;
+}
+
+- (void)configureNavigationBar
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )
+            self.navigationController.navigationBar.barTintColor =
+            [UIColor colorWithRed:0.048 green:0.539 blue:1.000 alpha:1.0];
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        if ( [[[ThemeManager sharedInstance] theme] isEqual:kThemeRed]) {
+            self.navigationController.navigationBar.barTintColor =
+            [UIColor redColor];
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        }
+        if ( [[[ThemeManager sharedInstance] theme] isEqual:kThemeBlack]) {
+            self.navigationController.navigationBar.barTintColor =
+            [UIColor blackColor];
+        }
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else {
+        
+        [self.navigationController.navigationBar setBackgroundImage:ThemeImage(@"header_bg")
+                                                      forBarMetrics:UIBarMetricsDefault];
+    }
+}
 
 - (void)showForEnablingPasscodeInViewController:(UIViewController *)viewController {
 	[self prepareForEnablingPasscode];
 	[self prepareNavigationControllerWithController: viewController];
 	self.title = NSLocalizedString(@"Enable Passcode", @"");
+    [self configureNavigationBar];
 }
 
 
@@ -523,6 +566,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 	[self prepareForChangingPasscode];
 	[self prepareNavigationControllerWithController: viewController];
 	self.title = NSLocalizedString(@"Change Passcode", @"");
+    [self configureNavigationBar];
 }
 
 
@@ -530,6 +574,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 	[self prepareForTurningOffPasscode];
 	[self prepareNavigationControllerWithController: viewController];
 	self.title = NSLocalizedString(@"Turn Off Passcode", @"");
+    [self configureNavigationBar];
 }
 
 

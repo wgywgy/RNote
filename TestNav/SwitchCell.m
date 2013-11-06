@@ -20,6 +20,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        [LTHPasscodeViewController sharedUser].delegate = self;
         CGRect bounds = self.bounds;
         NSLog(@"bounds:%f",self.bounds.size.height);
 //        if (bounds.size.height == 480) {
@@ -39,11 +40,11 @@
             switchView.center = CGPointMake(IOS7DIFFPADLEFT, bounds.size.height/2 +2);
         }
         
-        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-        BOOL saveStatus = [defaults boolForKey:@"usePassword"];
+//        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+//        BOOL saveStatus = [defaults boolForKey:@"usePassword"];
         
         //    [switchView setOn:saveStatus animated: YES];
-        switchView.on = saveStatus;
+        switchView.on = [LTHPasscodeViewController passcodeExistsInKeychain];
         [switchView addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:switchView];
 //        UIImage *accessoryImg = [[UIImage imageNamed:@"hideKeyboard.png"]
@@ -52,7 +53,7 @@
 //        cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
 //        self.accessoryView = nil;
     }
-    [LTHPasscodeViewController sharedUser].delegate = self;
+    
 
     return self;
 }
@@ -105,12 +106,13 @@
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
 
-    BOOL isButtonOn = [switchView isOn];
-    if (isButtonOn) {
-        [defaults setBool:YES forKey:@"usePassword"];
+//    BOOL isButtonOn = [switchView isOn];
+    BOOL isButtonOn = [LTHPasscodeViewController passcodeExistsInKeychain];
+    if (!isButtonOn) {
+//        [defaults setBool:YES forKey:@"usePassword"];
         [self showLockViewForEnablingPasscode];
     } else {
-        [defaults setBool:NO forKey:@"usePassword"];
+//        [defaults setBool:NO forKey:@"usePassword"];
         [self showLockViewForTurningPasscodeOff];
     }
     [defaults synchronize];

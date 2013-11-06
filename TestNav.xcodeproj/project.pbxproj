@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		030286CE17BA101700904C80 /* NSURL+urlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 030286CD17BA101700904C80 /* NSURL+urlRequest.m */; };
+		030521B8182A1AAA00C33C3E /* btn-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 030521B6182A1AAA00C33C3E /* btn-close.png */; };
+		030521B9182A1AAA00C33C3E /* btn-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 030521B7182A1AAA00C33C3E /* btn-close@2x.png */; };
 		0305F04417F4174700091F6B /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0305F04317F4174700091F6B /* share@2x.png */; };
 		030C24F917BB10660003D864 /* KOMovingBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030C24F817BB10660003D864 /* KOMovingBarViewController.m */; };
 		030C253D17BC76BB0003D864 /* shadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 030C253C17BC76BA0003D864 /* shadeView.m */; };
@@ -200,6 +202,8 @@
 		030286CB17B9FB1300904C80 /* UIImage+Tint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		030286CC17BA101700904C80 /* NSURL+urlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+urlRequest.h"; sourceTree = "<group>"; };
 		030286CD17BA101700904C80 /* NSURL+urlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+urlRequest.m"; sourceTree = "<group>"; };
+		030521B6182A1AAA00C33C3E /* btn-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close.png"; sourceTree = "<group>"; };
+		030521B7182A1AAA00C33C3E /* btn-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close@2x.png"; sourceTree = "<group>"; };
 		0305F04317F4174700091F6B /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		030C24F717BB10660003D864 /* KOMovingBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KOMovingBarViewController.h; sourceTree = "<group>"; };
 		030C24F817BB10660003D864 /* KOMovingBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KOMovingBarViewController.m; sourceTree = "<group>"; };
@@ -761,6 +765,8 @@
 		038FDB301794DC3C00C96F9C /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				030521B6182A1AAA00C33C3E /* btn-close.png */,
+				030521B7182A1AAA00C33C3E /* btn-close@2x.png */,
 				0305F04317F4174700091F6B /* share@2x.png */,
 				0379A81A17E696BC006A5725 /* UI7NavigationBarBackButton.png */,
 				0379A81B17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png */,
@@ -1087,6 +1093,7 @@
 				032E744B1793D24600CDE2C1 /* InfoPlist.strings in Resources */,
 				031E80B817E04BBF005E9CB4 /* Images.xcassets in Resources */,
 				032E74531793D24600CDE2C1 /* Default.png in Resources */,
+				030521B9182A1AAA00C33C3E /* btn-close@2x.png in Resources */,
 				032E74551793D24600CDE2C1 /* Default@2x.png in Resources */,
 				032E74571793D24600CDE2C1 /* Default-568h@2x.png in Resources */,
 				038FDB331794E05F00C96F9C /* ChoosePhotoViewController.xib in Resources */,
@@ -1183,6 +1190,7 @@
 				03825B4217D708A100BD59AA /* NewOldSelected@2x.png in Resources */,
 				03825B4317D708A100BD59AA /* OldNew.png in Resources */,
 				03825B4417D708A100BD59AA /* OldNew@2x.png in Resources */,
+				030521B8182A1AAA00C33C3E /* btn-close.png in Resources */,
 				03825B4517D708A100BD59AA /* OldNewSelected.png in Resources */,
 				03825B4617D708A100BD59AA /* OldNewSelected@2x.png in Resources */,
 				03825B4717D708A100BD59AA /* SortAZ.png in Resources */,
