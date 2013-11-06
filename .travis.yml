@@ -1,2 +1,3 @@
 language: objective-c
-script: xcodebuild -target TestNav -sdk iphonesimulator7.0
+script:
+  - make build-ios
