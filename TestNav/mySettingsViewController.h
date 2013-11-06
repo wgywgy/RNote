@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #import "AFNetworking.h"
+#import "LTHPasscodeViewController.h"
 
 @protocol changeSwitchColorDelegate;
 @protocol changeSwitchColorDelegate
 - (void)changeColor:(NSString *)color;
 @end
 
-@interface mySettingsViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
+@interface mySettingsViewController : BaseViewController
+<UITableViewDelegate, UITableViewDataSource, LTHPasscodeViewControllerDelegate>
 {
     CGRect rect_screen;
 }

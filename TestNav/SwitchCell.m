@@ -23,21 +23,12 @@
         [LTHPasscodeViewController sharedUser].delegate = self;
         CGRect bounds = self.bounds;
         NSLog(@"bounds:%f",self.bounds.size.height);
-//        if (bounds.size.height == 480) {
-//            switchView = [[UISwitch alloc] initWithFrame:
-//                          CGRectMake(320 - 62, bounds.size.height/2 - 14,
-//                                     self.frame.size.width, self.frame.size.height)];
-//        } else {
-//            switchView = [[UISwitch alloc] initWithFrame:
-//                          CGRectMake(320 - 96, bounds.size.height/2 - 12,
-//                                     self.frame.size.width, self.frame.size.height)];
-//        }
         rect_screen = [[UIScreen mainScreen]bounds];
         switchView = [[UISwitch alloc]init];
         if (rect_screen.size.height > 480) {
             switchView.center = CGPointMake(IOS7DIFFPADLEFT, bounds.size.height/2 +6);
         } else {
-            switchView.center = CGPointMake(IOS7DIFFPADLEFT, bounds.size.height/2 +2);
+            switchView.center = CGPointMake(IOS7DIFFPADLEFT, bounds.size.height/2 +1);
         }
         
 //        NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];

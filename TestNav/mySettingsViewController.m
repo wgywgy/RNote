@@ -94,11 +94,8 @@
     
     CGRect table = CGRectNull;
 
-//    if (rect_screen.size.height == 480) {
-        table = CGRectMake(0, -IOS7DIFFHEIGHT, 320, rect_screen.size.height +IOS7DIFFHEIGHT);
-//    } else {
-//        table = CGRectMake(0, 0, 320, rect_screen.size.height);
-//    }
+    table = CGRectMake(0, -IOS7DIFFHEIGHT, 320, rect_screen.size.height +IOS7DIFFHEIGHT);
+    
     self.myTableView = [[UITableView alloc] initWithFrame:table
                                                     style:UITableViewStyleGrouped];
     self.myTableView.delegate = self;
@@ -244,9 +241,8 @@
 {
     SelectThemeViewController *selectTheme = nil;
     AboutUsViewController *aboutUs = nil;
-    ChoosePhotoViewController *choose = nil;
+//    ChoosePhotoViewController *choose = nil;
     DownFontViewController *down = nil;
-    UIButton *Btn = nil;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
@@ -254,32 +250,11 @@
             case 0:
                 break;
             case 1:
+                [LTHPasscodeViewController sharedUser].delegate = self;
                 
-                choose = [[ChoosePhotoViewController alloc]init];
-                if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-                    Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 12, 20.5)];
-                    
-                    [Btn setImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
-                         forState:UIControlStateNormal];
-//                    [Btn setImageEdgeInsets:UIEdgeInsetsMake(0, -18, 0, 0)];
-//                    [Btn setBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
-//                                   forState:UIControlStateNormal];
-                } else {
-                    Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 30)];
-                    
-                    [Btn setImage:[UIImage imageNamed:@"navigationbar_backup_default.png"]
-                         forState:UIControlStateNormal];
-                    [Btn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
-                                             resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
-                                   forState:UIControlStateNormal];
+                if ([LTHPasscodeViewController passcodeExistsInKeychain]) {
+                    [[LTHPasscodeViewController sharedUser] showForChangingPasscodeInViewController: self];
                 }
-                
-
-                [Btn addTarget:self action:@selector(returnHelpCenter:) forControlEvents:UIControlEventTouchUpInside];
-
-                choose.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:Btn];
-                
-                [self.navigationController pushViewController:choose animated:YES];
                 break;
             case 2:
                 selectTheme = [[SelectThemeViewController alloc]init];
