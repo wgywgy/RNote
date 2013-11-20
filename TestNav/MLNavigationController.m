@@ -10,6 +10,7 @@
 
 #import "MLNavigationController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DDHTextView.h"
 
 NSString * const dragBackStatus = @"drag";
 NSString * const dragBackStatusOpen = @"dragOpen";
@@ -86,7 +87,10 @@ NSString * const dragBackStatusOpen = @"dragOpen";
     //    NSClassFromString (NSString *aClassName)  [DLStarRatingControl class]
     if ([touch.view isKindOfClass:[UITableViewCell class]])
     {
-        NSLog(@"NO");
+//        NSLog(@"NO");
+        return NO;
+    }
+    if([touch.view.superview isKindOfClass:[DDHTextView class]]) {
         return NO;
     }
     // UITableViewCellContentView => UITableViewCell

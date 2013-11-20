@@ -68,10 +68,15 @@
     [doneBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:doneBtn];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Done", @"")
-                                                                                 style:UIBarButtonItemStyleDone
-                                                                                target:self
-                                                                                action:@selector(close:)];
+//        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Done", @"")
+//                                                                                style:UIBarButtonItemStyleDone
+//                                                                               target:self
+//                                                                               action:@selector(close:)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"ok.png"]
+                                                                                style:UIBarButtonItemStyleDone
+                                                                               target:self
+                                                                               action:@selector(close:)];
+ 
         self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
 
     } else {

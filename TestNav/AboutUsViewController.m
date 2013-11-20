@@ -33,21 +33,21 @@
     
     UIButton *Btn = nil;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 12, 20.5)];
+        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 11, 18)];
         
-        [Btn setImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"] 
+        [Btn setImage:[UIImage imageNamed:@"Toolbar_back"]
              forState:UIControlStateNormal];
 
 //        [Btn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
 
     } else {
-        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 30)];
+        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 18)];
         
-        [Btn setImage:[UIImage imageNamed:@"navigationbar_backup_default.png"]
+        [Btn setImage:[UIImage imageNamed:@"Toolbar_back"]
              forState:UIControlStateNormal];
-        [Btn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
-                                 resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
-                       forState:UIControlStateNormal];
+//        [Btn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
+//                                 resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
+//                       forState:UIControlStateNormal];
     }
     
     [Btn addTarget:self action:@selector(returnHelpCenter:) forControlEvents:UIControlEventTouchUpInside];
@@ -55,7 +55,7 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:Btn];
     
     
-    self.navigationItem.backBarButtonItem = nil;
+//    self.navigationItem.backBarButtonItem = nil;
     self.navigationItem.leftBarButtonItem = backItem;
 
     self.title = NSLocalizedString(@"AboutUs", @"");

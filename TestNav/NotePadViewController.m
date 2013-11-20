@@ -188,7 +188,7 @@
     CGRect keyboardRect = [[[aNotification userInfo] objectForKey:@"UIKeyboardBoundsUserInfoKey"] CGRectValue];
     NSTimeInterval animationDuration =
     [[[aNotification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    CGRect frame = CGRectMake(0, 0, 0, 0);
+    CGRect frame;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         frame = CGRectMake(0, 0, 320, rect_screen.size.height);
     } else {
@@ -314,19 +314,19 @@
 {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         //     没有边框
-        backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 12, 20.5)];
+        backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 11, 18)];
 
 //        [backBtn setBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton"]
 //                           forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"UI7NavigationBarBackButton.png"]
+        [backBtn setImage:[UIImage imageNamed:@"Toolbar_back"]
                  forState:UIControlStateNormal];
 //        [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
     } else {
-        backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 30)];
+        backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 18)];
 
-        [backBtn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
-                                     resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
-                           forState:UIControlStateNormal];
+//        [backBtn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
+//                                     resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
+//                           forState:UIControlStateNormal];
     }
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
@@ -334,8 +334,9 @@
                 action:@selector(returnHelpCenter:)
       forControlEvents:UIControlEventTouchUpInside];
     [self configureBackViewBtn:backBtn];
-    self.navigationItem.backBarButtonItem = nil;
     self.navigationItem.leftBarButtonItem = backItem;
+    
+
 }
 
 - (void)configureBackViewBtn:(UIButton *)aBtn
@@ -349,7 +350,7 @@
                         imageWithTintColor:[UIColor btnGrayColor]]
               forState:UIControlStateNormal];
     } else {
-        [aBtn setImage:[UIImage imageNamed:@"navigationbar_backup_default.png"]
+        [aBtn setImage:[UIImage imageNamed:@"Toolbar_back.png"]
               forState:UIControlStateNormal];
     }
 }

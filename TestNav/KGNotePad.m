@@ -39,9 +39,10 @@
 
 - (void)setup{
     self.lineOffset = 8;
-    KGNotePadTextView *textView = [[KGNotePadTextView alloc] initWithFrame:self.bounds];
+    DDHTextView *textView = [[DDHTextView alloc] init];
+    textView.frame = self.bounds;
     textView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    textView.parentView = self;
+//    textView.parentView = self;
     [self addSubview:textView];
     self.textView = textView;
     self.backgroundColor = [UIColor clearColor];

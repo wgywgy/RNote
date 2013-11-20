@@ -41,14 +41,31 @@ static UITapGestureRecognizer *tapRecognizer;
     return self;
 }
 
-//- (void)customizeNavigationBar:(UINavigationBar *)bar {
-//    bar.clipsToBounds = YES;
-//    if ([bar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
-//        UIImage *image = [self imageWithColor:kNavigationBar_ToolBarBackGroundColor];
-//
-//        [bar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    }
-//}
+- (void)configNavigationItem
+{
+    UIButton *Btn = nil;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 11, 18)];
+        
+        [Btn setImage:[UIImage imageNamed:@"Toolbar_back"]
+             forState:UIControlStateNormal];
+    } else {
+        Btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 18)];
+        
+        [Btn setImage:[UIImage imageNamed:@"Toolbar_back"]
+             forState:UIControlStateNormal];
+    }
+    
+    [Btn addTarget:self action:@selector(returnHelpCenter:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:Btn];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+- (void)returnHelpCenter:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewWillLayoutSubviews
 {
@@ -156,7 +173,7 @@ static UITapGestureRecognizer *tapRecognizer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self configNavigationItem];
 
     self.navigationItem.title = NSLocalizedString(@"Feedback", @"用户反馈");
 

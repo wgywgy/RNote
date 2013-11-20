@@ -87,8 +87,8 @@ NSString * const TextDidEdit = @"edit";
 	}
     
     mainViewController *main = [[mainViewController alloc]init];
-    MLNavigationController *navCtrl =
-    [[MLNavigationController alloc]initWithRootViewController:main];
+    UINavigationController *navCtrl =
+    [[UINavigationController alloc]initWithRootViewController:main];
     
     self.window.rootViewController = navCtrl;
 

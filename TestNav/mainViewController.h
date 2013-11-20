@@ -41,6 +41,7 @@
 
 @property (nonatomic, retain) NSMutableArray* Notes;
 
+@property (nonatomic, retain) UIButton *backBtn;
 //@property (nonatomic, retain) shadeView *myListShade;
 //@property (nonatomic, retain) UISearchBar *searchBar;
 

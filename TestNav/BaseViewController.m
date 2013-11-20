@@ -115,6 +115,7 @@
 
         [self.navigationController.navigationBar setBackgroundImage:ThemeImage(@"header_bg")
                                             forBarMetrics:UIBarMetricsDefault];
+        
     }
     
 //    if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )

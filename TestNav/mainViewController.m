@@ -276,6 +276,15 @@ TableSortSortCriteria;
     }
     
     [self configureButton];
+    
+//    UIImage *backButtonImage = [UIImage imageNamed:@"arrow_back.png"];
+//    backButtonImage = [backButtonImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
+//                                    initWithImage:backButtonImage
+//                                    style:UIBarButtonItemStylePlain
+//                                    target:nil
+//                                    action:nil];
+//    [[self navigationItem] setBackBarButtonItem:backButton];
 }
 
 - (void)toggleEditMode:(id)sender {

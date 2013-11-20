@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KGNotePadTextView : UITextView
+#import "DDHTextView.h"
+@interface KGNotePadTextView : DDHTextView
 @end
 
 @interface KGNotePad : UIView
@@ -19,6 +20,6 @@
 @property (strong, nonatomic) UIColor *verticalLineColor;
 @property (strong, nonatomic) UIColor *horizontalLineColor;
 @property (strong, nonatomic) UIColor *paperBackgroundColor;
-@property (weak, nonatomic, readonly) KGNotePadTextView *textView;
+@property (weak, nonatomic, readonly) DDHTextView *textView;
 
 @end
