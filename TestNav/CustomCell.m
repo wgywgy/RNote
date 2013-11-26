@@ -24,8 +24,8 @@
     [super layoutSubviews];
 
     CGRect bounds = self.bounds;
-    self.detailTextLabel.font = [UIFont systemFontOfSize:12];
-    
+    self.detailTextLabel.font = [UIFont fontWithName:@"Avenir Next Condensed" size:13];
+//    13.0
     if (rect_screen.size.height == 480) {
         [self.textLabel setFrame:
          CGRectMake(8, 4, 304, bounds.size.height / 2)];

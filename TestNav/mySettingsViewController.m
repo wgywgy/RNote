@@ -225,9 +225,14 @@
             
             CGRect bounds = cell.bounds;
             int diffpad = rect_screen.size.height == 480 ? 16:10;
-            _activityIndicator = [[UIActivityIndicatorView alloc]
-                                  initWithFrame:CGRectMake(256.0f, bounds.size.height /2 -diffpad, 32.0f, 32.0f)];
-            [_activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+            _activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:
+                                  CGRectMake(256.0f, bounds.size.height /2 -diffpad, 32.0f, 32.0f)];
+            if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] )
+            {
+                [_activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+            } else {
+                [_activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+            }
             [cell addSubview:_activityIndicator];
         }
         

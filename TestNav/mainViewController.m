@@ -129,7 +129,7 @@ TableSortSortCriteria;
     doneBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 56, 30)];
     [doneBtn addTarget:self action:@selector(toggleEditMode:) forControlEvents:UIControlEventTouchUpInside];
     [doneBtn setTitle:NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
-    [doneBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    doneBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
     [doneBtn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
                                  resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
                        forState:UIControlStateNormal];
@@ -337,7 +337,7 @@ shouldReloadTableForSearchScope:(NSInteger)searchOption {
                          reuseIdentifier:cellId];
     }
     
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:20];
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:20];// [UIFont boldSystemFontOfSize:20];
     
     if ([tableView isEqual:self.searchDisplayController.searchResultsTableView]){
         
