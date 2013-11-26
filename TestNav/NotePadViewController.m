@@ -342,7 +342,7 @@
     }
     if( [[[ThemeManager sharedInstance] theme] isEqual:kThemeBlack] )
     {
-        [aBtn setImage:[[UIImage imageNamed:@"navigationbar_backup_default.png"]
+        [aBtn setImage:[[UIImage imageNamed:@"Toolbar_back.png"]
                         imageWithTintColor:[UIColor btnGrayColor]]
               forState:UIControlStateNormal];
     } else {

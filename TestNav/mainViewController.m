@@ -591,7 +591,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     }
     else if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] )
     {
-//        self.myTableView.backgroundColor = [UIColor redColor];
+        self.myTableView.backgroundColor = [UIColor redColor];
         self.view.backgroundColor = [UIColor paperDarkGrayColor];
         self.myTableView.separatorColor = [UIColor fontDarkGrayColor];
         self.myTableView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
@@ -614,12 +614,15 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
         [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ) {
             [view setBackgroundColor:[UIColor paperDarkGrayColor]];
+            aTableView.tableFooterView = view;
+            aTableView.backgroundColor = [UIColor paperDarkGrayColor];
         } else {
             [view setBackgroundColor:[UIColor paperWhiteColor]];
+            aTableView.tableFooterView = view;
+            aTableView.backgroundColor = [UIColor paperWhiteColor];
         }
         
-        aTableView.tableFooterView = view;
-        aTableView.backgroundColor = [UIColor paperWhiteColor];
+
     }
 }
 
@@ -657,7 +660,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
         aCell.textLabel.textColor = [UIColor btnGrayColor];
         aCell.detailTextLabel.textColor = [UIColor btnGrayColor];
 
-        aCell.backgroundColor = [UIColor paperDarkGrayColor];
+        aCell.backgroundColor = [UIColor clearColor];
     }
 }
 
