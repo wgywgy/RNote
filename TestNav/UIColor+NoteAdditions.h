@@ -24,9 +24,10 @@
 + (UIColor *)btnGrayColor;
 
 + (UIColor *)tableViewBackgroundColor;
-+ (UIColor *)tableViewDrakBackgroundColor;
 
 + (UIColor *)tableViewDarkBackgroundColor;
 + (UIColor *)blueNavigationColor;
 + (UIColor *)redNavigationColor;
+
++ (UIColor *)titleTextColor;
 @end

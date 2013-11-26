@@ -426,9 +426,9 @@
 
 - (void)configureTableview
 {
+    self.view.backgroundColor = [UIColor tableViewBackgroundColor];
     if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )
     {
-        self.view.backgroundColor = [UIColor tableViewBackgroundColor];
         self.myTableView.backgroundView = nil;
         self.myTableView.backgroundColor = [UIColor clearColor];
 
@@ -436,7 +436,6 @@
         footer.shadowColor = [UIColor whiteColor];
 
     } else if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeRed] ) {
-        self.view.backgroundColor = [UIColor tableViewBackgroundColor];
         self.myTableView.backgroundView = nil;
         self.myTableView.backgroundColor = [UIColor clearColor];
         
@@ -445,7 +444,6 @@
     } else if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ) {
         self.myTableView.separatorColor = [UIColor fontNightWhiteColor];
         [self.changeColorDelegate changeColor:@"Black"];
-        self.view.backgroundColor = [UIColor tableViewDarkBackgroundColor];
         self.myTableView.backgroundView = nil;
         self.myTableView.backgroundColor = [UIColor clearColor];
         

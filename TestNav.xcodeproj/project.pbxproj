@@ -27,8 +27,6 @@
 		03191F0B17A8DC5A0035F9DE /* theme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0117A8DC5A0035F9DE /* theme@2x.png */; };
 		03191F0C17A8DC5A0035F9DE /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0217A8DC5A0035F9DE /* update.png */; };
 		03191F0D17A8DC5A0035F9DE /* update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0317A8DC5A0035F9DE /* update@2x.png */; };
-		03191F1017A8F8180035F9DE /* navigationbar_backup_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0E17A8F8180035F9DE /* navigationbar_backup_default.png */; };
-		03191F1117A8F8180035F9DE /* navigationbar_backup_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03191F0F17A8F8180035F9DE /* navigationbar_backup_default@2x.png */; };
 		031E80B817E04BBF005E9CB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031E80B717E04BBF005E9CB4 /* Images.xcassets */; };
 		031E80BC17E04CF9005E9CB4 /* mainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031E80BB17E04CF9005E9CB4 /* mainViewController.xib */; };
 		0322790D1828E59E00876CF4 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 032279071828E59E00876CF4 /* SFHFKeychainUtils.m */; };
@@ -71,6 +69,7 @@
 		032E74551793D24600CDE2C1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 032E74541793D24600CDE2C1 /* Default@2x.png */; };
 		032E74571793D24600CDE2C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 032E74561793D24600CDE2C1 /* Default-568h@2x.png */; };
 		032E745A1793D24600CDE2C1 /* ChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032E74591793D24600CDE2C1 /* ChoosePhotoViewController.m */; };
+		0330662E18442EE70076EAD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0330662D18442EE60076EAD5 /* StoreKit.framework */; };
 		0377723317BDCF4D00D5A5BD /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 030286CB17B9FB1300904C80 /* UIImage+Tint.m */; };
 		0379A81C17E696BC006A5725 /* UI7NavigationBarBackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0379A81A17E696BC006A5725 /* UI7NavigationBarBackButton.png */; };
 		0379A81D17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0379A81B17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png */; };
@@ -161,6 +160,26 @@
 		03AB714417A9FB3D005AC88B /* NotePadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AB714217A9FB3D005AC88B /* NotePadViewController.m */; };
 		03AB714517A9FB3D005AC88B /* NotePadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03AB714317A9FB3D005AC88B /* NotePadViewController.xib */; };
 		03AB714917A9FDCF005AC88B /* MLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AB714817A9FDCF005AC88B /* MLNavigationController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		03AFFD76183F323F0097D92A /* UIToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD73183F323F0097D92A /* UIToolView.m */; };
+		03AFFD77183F323F0097D92A /* UIColor+ToolViewColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD75183F323F0097D92A /* UIColor+ToolViewColor.m */; };
+		03AFFD7C183F32510097D92A /* switch1_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD78183F32510097D92A /* switch1_list.png */; };
+		03AFFD7D183F32510097D92A /* switch1_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD79183F32510097D92A /* switch1_list@2x.png */; };
+		03AFFD7E183F32510097D92A /* switch1_gird.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD7A183F32510097D92A /* switch1_gird.png */; };
+		03AFFD7F183F32510097D92A /* switch1_gird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD7B183F32510097D92A /* switch1_gird@2x.png */; };
+		03AFFD83183F327E0097D92A /* SevenSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD82183F327E0097D92A /* SevenSwitch.m */; };
+		03AFFD86183F32850097D92A /* PPiFlatSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD85183F32850097D92A /* PPiFlatSegmentedControl.m */; };
+		03AFFD8A183F32A20097D92A /* UIButton+PPiAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD89183F32A20097D92A /* UIButton+PPiAwesome.m */; };
+		03AFFD8D183F32BA0097D92A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD8C183F32BA0097D92A /* fontawesome-webfont.ttf */; };
+		03AFFD97183F32CF0097D92A /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD90183F32CF0097D92A /* FAImageView.m */; };
+		03AFFD98183F32CF0097D92A /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD92183F32CF0097D92A /* NSString+FontAwesome.m */; };
+		03AFFD99183F32CF0097D92A /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD94183F32CF0097D92A /* UIFont+FontAwesome.m */; };
+		03AFFD9A183F32CF0097D92A /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD96183F32CF0097D92A /* UIImage+FontAwesome.m */; };
+		03AFFD9C183F32DC0097D92A /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03AFFD9B183F32DC0097D92A /* FontAwesome.ttf */; };
+		03AFFDA9183F32E60097D92A /* GMGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFD9E183F32E60097D92A /* GMGridView.m */; };
+		03AFFDAA183F32E60097D92A /* GMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFDA1183F32E60097D92A /* GMGridViewCell.m */; };
+		03AFFDAB183F32E60097D92A /* GMGridViewLayoutStrategies.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFDA4183F32E60097D92A /* GMGridViewLayoutStrategies.m */; };
+		03AFFDAC183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFDA6183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.m */; };
+		03AFFDAD183F32E60097D92A /* UIView+GMGridViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AFFDA8183F32E60097D92A /* UIView+GMGridViewAdditions.m */; };
 		03B61F5A183C5A52004A6A01 /* DDHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B61F59183C5A52004A6A01 /* DDHTextView.m */; };
 		03BA74EE17CAFA1100701643 /* searchField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BA74ED17CAFA1100701643 /* searchField@2x.png */; };
 		03BA74F017CAFDE700701643 /* searchFieldIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BA74EF17CAFDE700701643 /* searchFieldIcon@2x.png */; };
@@ -180,6 +199,7 @@
 		03D0AA7717E18768007AC275 /* configSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D0AA7617E18768007AC275 /* configSelected@2x.png */; };
 		03D3D32017D41DA000B352B9 /* SwipeGesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D31F17D41DA000B352B9 /* SwipeGesViewController.m */; };
 		03DB98011793D75E005E439E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB98001793D75E005E439E /* QuartzCore.framework */; };
+		03E15E9E184334E10037A9D6 /* RateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E15E9D184334E10037A9D6 /* RateButton.m */; };
 		03EAA703179FAADB00DA4AE7 /* resource in Resources */ = {isa = PBXBuildFile; fileRef = 03EAA702179FAADB00DA4AE7 /* resource */; };
 		03EADC6917A645FF00916441 /* NavigationButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EADC6717A645FF00916441 /* NavigationButtonBG.png */; };
 		03EADC6A17A645FF00916441 /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EADC6817A645FF00916441 /* NavigationButtonBG@2x.png */; };
@@ -228,8 +248,6 @@
 		03191F0117A8DC5A0035F9DE /* theme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theme@2x.png"; sourceTree = "<group>"; };
 		03191F0217A8DC5A0035F9DE /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 		03191F0317A8DC5A0035F9DE /* update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update@2x.png"; sourceTree = "<group>"; };
-		03191F0E17A8F8180035F9DE /* navigationbar_backup_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_backup_default.png; sourceTree = "<group>"; };
-		03191F0F17A8F8180035F9DE /* navigationbar_backup_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_backup_default@2x.png"; sourceTree = "<group>"; };
 		031E80B717E04BBF005E9CB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		031E80BB17E04CF9005E9CB4 /* mainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainViewController.xib; sourceTree = "<group>"; };
 		032279061828E59E00876CF4 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
@@ -305,6 +323,7 @@
 		032E74561793D24600CDE2C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		032E74581793D24600CDE2C1 /* ChoosePhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoosePhotoViewController.h; sourceTree = "<group>"; };
 		032E74591793D24600CDE2C1 /* ChoosePhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoosePhotoViewController.m; sourceTree = "<group>"; };
+		0330662D18442EE60076EAD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		03662E8E17C1ED9800E0D50E /* DeviceSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSystem.h; sourceTree = "<group>"; };
 		0379A81A17E696BC006A5725 /* UI7NavigationBarBackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI7NavigationBarBackButton.png; sourceTree = "<group>"; };
 		0379A81B17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI7NavigationBarBackButton@2x.png"; sourceTree = "<group>"; };
@@ -413,6 +432,42 @@
 		03AB714317A9FB3D005AC88B /* NotePadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotePadViewController.xib; sourceTree = "<group>"; };
 		03AB714717A9FDCF005AC88B /* MLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLNavigationController.h; sourceTree = "<group>"; };
 		03AB714817A9FDCF005AC88B /* MLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLNavigationController.m; sourceTree = "<group>"; };
+		03AFFD72183F323F0097D92A /* UIToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIToolView.h; sourceTree = "<group>"; };
+		03AFFD73183F323F0097D92A /* UIToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIToolView.m; sourceTree = "<group>"; };
+		03AFFD74183F323F0097D92A /* UIColor+ToolViewColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ToolViewColor.h"; sourceTree = "<group>"; };
+		03AFFD75183F323F0097D92A /* UIColor+ToolViewColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ToolViewColor.m"; sourceTree = "<group>"; };
+		03AFFD78183F32510097D92A /* switch1_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch1_list.png; sourceTree = "<group>"; };
+		03AFFD79183F32510097D92A /* switch1_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch1_list@2x.png"; sourceTree = "<group>"; };
+		03AFFD7A183F32510097D92A /* switch1_gird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch1_gird.png; sourceTree = "<group>"; };
+		03AFFD7B183F32510097D92A /* switch1_gird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch1_gird@2x.png"; sourceTree = "<group>"; };
+		03AFFD81183F327E0097D92A /* SevenSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenSwitch.h; sourceTree = "<group>"; };
+		03AFFD82183F327E0097D92A /* SevenSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenSwitch.m; sourceTree = "<group>"; };
+		03AFFD84183F32850097D92A /* PPiFlatSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPiFlatSegmentedControl.h; sourceTree = "<group>"; };
+		03AFFD85183F32850097D92A /* PPiFlatSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPiFlatSegmentedControl.m; sourceTree = "<group>"; };
+		03AFFD88183F32A20097D92A /* UIButton+PPiAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+PPiAwesome.h"; sourceTree = "<group>"; };
+		03AFFD89183F32A20097D92A /* UIButton+PPiAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PPiAwesome.m"; sourceTree = "<group>"; };
+		03AFFD8C183F32BA0097D92A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		03AFFD8F183F32CF0097D92A /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
+		03AFFD90183F32CF0097D92A /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
+		03AFFD91183F32CF0097D92A /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		03AFFD92183F32CF0097D92A /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		03AFFD93183F32CF0097D92A /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		03AFFD94183F32CF0097D92A /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		03AFFD95183F32CF0097D92A /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
+		03AFFD96183F32CF0097D92A /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
+		03AFFD9B183F32DC0097D92A /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		03AFFD9D183F32E60097D92A /* GMGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridView.h; sourceTree = "<group>"; };
+		03AFFD9E183F32E60097D92A /* GMGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridView.m; sourceTree = "<group>"; };
+		03AFFD9F183F32E60097D92A /* GMGridView-Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridView-Constants.h"; sourceTree = "<group>"; };
+		03AFFDA0183F32E60097D92A /* GMGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridViewCell.h; sourceTree = "<group>"; };
+		03AFFDA1183F32E60097D92A /* GMGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridViewCell.m; sourceTree = "<group>"; };
+		03AFFDA2183F32E60097D92A /* GMGridViewCell+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMGridViewCell+Extended.h"; sourceTree = "<group>"; };
+		03AFFDA3183F32E60097D92A /* GMGridViewLayoutStrategies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridViewLayoutStrategies.h; sourceTree = "<group>"; };
+		03AFFDA4183F32E60097D92A /* GMGridViewLayoutStrategies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridViewLayoutStrategies.m; sourceTree = "<group>"; };
+		03AFFDA5183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GMGridViewAdditions.h"; sourceTree = "<group>"; };
+		03AFFDA6183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GMGridViewAdditions.m"; sourceTree = "<group>"; };
+		03AFFDA7183F32E60097D92A /* UIView+GMGridViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GMGridViewAdditions.h"; sourceTree = "<group>"; };
+		03AFFDA8183F32E60097D92A /* UIView+GMGridViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GMGridViewAdditions.m"; sourceTree = "<group>"; };
 		03B61F58183C5A52004A6A01 /* DDHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTextView.h; sourceTree = "<group>"; };
 		03B61F59183C5A52004A6A01 /* DDHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTextView.m; sourceTree = "<group>"; };
 		03BA74ED17CAFA1100701643 /* searchField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchField@2x.png"; sourceTree = "<group>"; };
@@ -443,6 +498,8 @@
 		03D3D31E17D41DA000B352B9 /* SwipeGesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeGesViewController.h; sourceTree = "<group>"; };
 		03D3D31F17D41DA000B352B9 /* SwipeGesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeGesViewController.m; sourceTree = "<group>"; };
 		03DB98001793D75E005E439E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		03E15E9C184334E10037A9D6 /* RateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateButton.h; sourceTree = "<group>"; };
+		03E15E9D184334E10037A9D6 /* RateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateButton.m; sourceTree = "<group>"; };
 		03EAA702179FAADB00DA4AE7 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
 		03EADC6717A645FF00916441 /* NavigationButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationButtonBG.png; sourceTree = "<group>"; };
 		03EADC6817A645FF00916441 /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
@@ -473,6 +530,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0330662E18442EE70076EAD5 /* StoreKit.framework in Frameworks */,
 				03BEE5071827973500FF4D3E /* CoreText.framework in Frameworks */,
 				0379A86917E94D24006A5725 /* MessageUI.framework in Frameworks */,
 				032C2F2917A7AA9A00A50022 /* CoreLocation.framework in Frameworks */,
@@ -643,6 +701,7 @@
 		032E743F1793D24600CDE2C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0330662D18442EE60076EAD5 /* StoreKit.framework */,
 				03BEE5061827973500FF4D3E /* CoreText.framework */,
 				0379A86817E94D24006A5725 /* MessageUI.framework */,
 				032C2F2817A7AA9A00A50022 /* CoreLocation.framework */,
@@ -661,6 +720,7 @@
 		032E74461793D24600CDE2C1 /* TestNav */ = {
 			isa = PBXGroup;
 			children = (
+				03AFFD71183F32340097D92A /* ToolView */,
 				0379A86717E9472D006A5725 /* Share */,
 				03AB713C17A9FA90005AC88B /* NotePad */,
 				03AB713317A9F550005AC88B /* AboutUs */,
@@ -772,6 +832,10 @@
 		038FDB301794DC3C00C96F9C /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				03AFFD78183F32510097D92A /* switch1_list.png */,
+				03AFFD79183F32510097D92A /* switch1_list@2x.png */,
+				03AFFD7A183F32510097D92A /* switch1_gird.png */,
+				03AFFD7B183F32510097D92A /* switch1_gird@2x.png */,
 				030A2C43183CAAC1005BAF3A /* Toolbar_back@2x.png */,
 				030A2C41183CA2E1005BAF3A /* ok@2x.png */,
 				030521B6182A1AAA00C33C3E /* btn-close.png */,
@@ -781,8 +845,6 @@
 				0379A81B17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png */,
 				03BA74EF17CAFDE700701643 /* searchFieldIcon@2x.png */,
 				03BA74ED17CAFA1100701643 /* searchField@2x.png */,
-				03191F0E17A8F8180035F9DE /* navigationbar_backup_default.png */,
-				03191F0F17A8F8180035F9DE /* navigationbar_backup_default@2x.png */,
 				03191EFA17A8DC5A0035F9DE /* aboutUs.png */,
 				03191EFB17A8DC5A0035F9DE /* aboutUs@2x.png */,
 				03191EFC17A8DC5A0035F9DE /* feedBack.png */,
@@ -850,6 +912,12 @@
 		038FDB311794DC4C00C96F9C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				03E15E9B184334AD0037A9D6 /* RateButton */,
+				03AFFDAE183F32E90097D92A /* GMGrid */,
+				03AFFD8E183F32C80097D92A /* FontAwesome+iOS */,
+				03AFFD8B183F32A50097D92A /* PPiAwesome */,
+				03AFFD87183F32870097D92A /* PPiFlatSegment */,
+				03AFFD80183F32730097D92A /* SevenSwitch */,
 				03B61F57183C5A48004A6A01 /* DDHTextView */,
 				032279051828E59100876CF4 /* LTHPasscode */,
 				03825B1E17D7061A00BD59AA /* RMEIdeasPullDownControl */,
@@ -964,6 +1032,80 @@
 			name = MLNavigation;
 			sourceTree = "<group>";
 		};
+		03AFFD71183F32340097D92A /* ToolView */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD72183F323F0097D92A /* UIToolView.h */,
+				03AFFD73183F323F0097D92A /* UIToolView.m */,
+				03AFFD74183F323F0097D92A /* UIColor+ToolViewColor.h */,
+				03AFFD75183F323F0097D92A /* UIColor+ToolViewColor.m */,
+			);
+			name = ToolView;
+			sourceTree = "<group>";
+		};
+		03AFFD80183F32730097D92A /* SevenSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD81183F327E0097D92A /* SevenSwitch.h */,
+				03AFFD82183F327E0097D92A /* SevenSwitch.m */,
+			);
+			name = SevenSwitch;
+			sourceTree = "<group>";
+		};
+		03AFFD87183F32870097D92A /* PPiFlatSegment */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD84183F32850097D92A /* PPiFlatSegmentedControl.h */,
+				03AFFD85183F32850097D92A /* PPiFlatSegmentedControl.m */,
+			);
+			name = PPiFlatSegment;
+			sourceTree = "<group>";
+		};
+		03AFFD8B183F32A50097D92A /* PPiAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD88183F32A20097D92A /* UIButton+PPiAwesome.h */,
+				03AFFD89183F32A20097D92A /* UIButton+PPiAwesome.m */,
+				03AFFD8C183F32BA0097D92A /* fontawesome-webfont.ttf */,
+			);
+			name = PPiAwesome;
+			sourceTree = "<group>";
+		};
+		03AFFD8E183F32C80097D92A /* FontAwesome+iOS */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD8F183F32CF0097D92A /* FAImageView.h */,
+				03AFFD90183F32CF0097D92A /* FAImageView.m */,
+				03AFFD91183F32CF0097D92A /* NSString+FontAwesome.h */,
+				03AFFD92183F32CF0097D92A /* NSString+FontAwesome.m */,
+				03AFFD93183F32CF0097D92A /* UIFont+FontAwesome.h */,
+				03AFFD94183F32CF0097D92A /* UIFont+FontAwesome.m */,
+				03AFFD95183F32CF0097D92A /* UIImage+FontAwesome.h */,
+				03AFFD96183F32CF0097D92A /* UIImage+FontAwesome.m */,
+				03AFFD9B183F32DC0097D92A /* FontAwesome.ttf */,
+			);
+			name = "FontAwesome+iOS";
+			sourceTree = "<group>";
+		};
+		03AFFDAE183F32E90097D92A /* GMGrid */ = {
+			isa = PBXGroup;
+			children = (
+				03AFFD9D183F32E60097D92A /* GMGridView.h */,
+				03AFFD9E183F32E60097D92A /* GMGridView.m */,
+				03AFFD9F183F32E60097D92A /* GMGridView-Constants.h */,
+				03AFFDA0183F32E60097D92A /* GMGridViewCell.h */,
+				03AFFDA1183F32E60097D92A /* GMGridViewCell.m */,
+				03AFFDA2183F32E60097D92A /* GMGridViewCell+Extended.h */,
+				03AFFDA3183F32E60097D92A /* GMGridViewLayoutStrategies.h */,
+				03AFFDA4183F32E60097D92A /* GMGridViewLayoutStrategies.m */,
+				03AFFDA5183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.h */,
+				03AFFDA6183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.m */,
+				03AFFDA7183F32E60097D92A /* UIView+GMGridViewAdditions.h */,
+				03AFFDA8183F32E60097D92A /* UIView+GMGridViewAdditions.m */,
+			);
+			name = GMGrid;
+			sourceTree = "<group>";
+		};
 		03B61F57183C5A48004A6A01 /* DDHTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +1132,15 @@
 				03D3D31F17D41DA000B352B9 /* SwipeGesViewController.m */,
 			);
 			name = Swipe;
+			sourceTree = "<group>";
+		};
+		03E15E9B184334AD0037A9D6 /* RateButton */ = {
+			isa = PBXGroup;
+			children = (
+				03E15E9C184334E10037A9D6 /* RateButton.h */,
+				03E15E9D184334E10037A9D6 /* RateButton.m */,
+			);
+			name = RateButton;
 			sourceTree = "<group>";
 		};
 		03F5BFA6179E171A00B24157 /* Categories */ = {
@@ -1112,10 +1263,12 @@
 				032E744B1793D24600CDE2C1 /* InfoPlist.strings in Resources */,
 				031E80B817E04BBF005E9CB4 /* Images.xcassets in Resources */,
 				032E74531793D24600CDE2C1 /* Default.png in Resources */,
+				03AFFD7F183F32510097D92A /* switch1_gird@2x.png in Resources */,
 				030521B9182A1AAA00C33C3E /* btn-close@2x.png in Resources */,
 				030A2C44183CAAC1005BAF3A /* Toolbar_back@2x.png in Resources */,
 				032E74551793D24600CDE2C1 /* Default@2x.png in Resources */,
 				032E74571793D24600CDE2C1 /* Default-568h@2x.png in Resources */,
+				03AFFD7D183F32510097D92A /* switch1_list@2x.png in Resources */,
 				038FDB331794E05F00C96F9C /* ChoosePhotoViewController.xib in Resources */,
 				032E0B64179638C6006711CE /* ChoosePositionViewController.xib in Resources */,
 				038EF873179912F4001BC629 /* ChoosePos2ViewController.xib in Resources */,
@@ -1147,8 +1300,6 @@
 				03191F0B17A8DC5A0035F9DE /* theme@2x.png in Resources */,
 				03191F0C17A8DC5A0035F9DE /* update.png in Resources */,
 				03191F0D17A8DC5A0035F9DE /* update@2x.png in Resources */,
-				03191F1017A8F8180035F9DE /* navigationbar_backup_default.png in Resources */,
-				03191F1117A8F8180035F9DE /* navigationbar_backup_default@2x.png in Resources */,
 				03AB711D17A901FE005AC88B /* umeng_logo.png in Resources */,
 				03AB711E17A901FE005AC88B /* item_ok@2x.png in Resources */,
 				03AB711F17A901FE005AC88B /* icon_rightArrow_selected@2x.png in Resources */,
@@ -1169,6 +1320,7 @@
 				0379A87117E94D64006A5725 /* mailActivity@2x.png in Resources */,
 				03AB712C17A901FE005AC88B /* messages_toolbar_background.png in Resources */,
 				0379A88617E94D95006A5725 /* textActivity.png in Resources */,
+				03AFFD7E183F32510097D92A /* switch1_gird.png in Resources */,
 				0379A88917E94D95006A5725 /* textActivity~ipad.png in Resources */,
 				03AB712D17A901FE005AC88B /* messages_toolbar_background@2x.png in Resources */,
 				03AB713B17A9F6FB005AC88B /* AboutUsViewController.xib in Resources */,
@@ -1183,6 +1335,7 @@
 				039BF56A17AA3E8600B4D8F4 /* locked.png in Resources */,
 				039BF56B17AA3E8600B4D8F4 /* locked@2x.png in Resources */,
 				03A6407C17AB561B00474BE4 /* paper.png in Resources */,
+				03AFFD7C183F32510097D92A /* switch1_list.png in Resources */,
 				03BEE4F8182787F000FF4D3E /* UMFeedbackViewController.xib in Resources */,
 				03A6407D17AB561B00474BE4 /* paper@2x.png in Resources */,
 				03A6408417AB5CF400474BE4 /* lockedScreen.png in Resources */,
@@ -1199,6 +1352,7 @@
 				0379A87017E94D64006A5725 /* mailActivity.png in Resources */,
 				03825B3A17D708A100BD59AA /* HighLowSelected@2x.png in Resources */,
 				03825B3B17D708A100BD59AA /* LowHigh@2x.png in Resources */,
+				03AFFD8D183F32BA0097D92A /* fontawesome-webfont.ttf in Resources */,
 				030A2C42183CA2E1005BAF3A /* ok@2x.png in Resources */,
 				03825B3C17D708A100BD59AA /* LowHighSelected.png in Resources */,
 				03825B3D17D708A100BD59AA /* LowHighSelected@2x.png in Resources */,
@@ -1206,6 +1360,7 @@
 				03825B3E17D708A100BD59AA /* LowHigh.png in Resources */,
 				03825B3F17D708A100BD59AA /* NewOld.png in Resources */,
 				03825B4017D708A100BD59AA /* NewOld@2x.png in Resources */,
+				03AFFD9C183F32DC0097D92A /* FontAwesome.ttf in Resources */,
 				03825B4117D708A100BD59AA /* NewOldSelected.png in Resources */,
 				0379A81D17E696BC006A5725 /* UI7NavigationBarBackButton@2x.png in Resources */,
 				03825B4217D708A100BD59AA /* NewOldSelected@2x.png in Resources */,
@@ -1232,6 +1387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AFFD77183F323F0097D92A /* UIColor+ToolViewColor.m in Sources */,
 				03BEE4F5182787F000FF4D3E /* UMEGORefreshTableHeaderView.m in Sources */,
 				0377723317BDCF4D00D5A5BD /* UIImage+Tint.m in Sources */,
 				032E744D1793D24600CDE2C1 /* main.m in Sources */,
@@ -1244,19 +1400,25 @@
 				032E0B5817962F6B006711CE /* UIFont+Alert.m in Sources */,
 				032E0B5917962F6B006711CE /* UIView+Animations.m in Sources */,
 				032E0B5A17962F6B006711CE /* MBAlertView.m in Sources */,
+				03AFFD97183F32CF0097D92A /* FAImageView.m in Sources */,
 				032E0B5B17962F6B006711CE /* MBHUDView.m in Sources */,
 				032E0B5C17962F6B006711CE /* MBAlertViewItem.m in Sources */,
 				032E0B5D17962F6B006711CE /* MBAlertViewButton.m in Sources */,
 				032E0B5E17962F6B006711CE /* MBCheckMarkView.m in Sources */,
+				03AFFD99183F32CF0097D92A /* UIFont+FontAwesome.m in Sources */,
 				032E0B5F17962F6B006711CE /* MBSpinningCircle.m in Sources */,
 				032E0B63179638C6006711CE /* ChoosePositionViewController.m in Sources */,
+				03AFFD98183F32CF0097D92A /* NSString+FontAwesome.m in Sources */,
+				03AFFDAB183F32E60097D92A /* GMGridViewLayoutStrategies.m in Sources */,
 				032E0B671798B963006711CE /* UIView+zoom.m in Sources */,
 				0379A87917E94D6C006A5725 /* WHMailActivityItem.m in Sources */,
 				038EF872179912F4001BC629 /* ChoosePos2ViewController.m in Sources */,
 				0322790D1828E59E00876CF4 /* SFHFKeychainUtils.m in Sources */,
+				03AFFD8A183F32A20097D92A /* UIButton+PPiAwesome.m in Sources */,
 				038EF87717991692001BC629 /* ChoosePos3ViewController.m in Sources */,
 				038EF87C179916B3001BC629 /* ChoosePos4ViewController.m in Sources */,
 				038EF88117991C0E001BC629 /* mainViewController.m in Sources */,
+				03E15E9E184334E10037A9D6 /* RateButton.m in Sources */,
 				03F5BFB1179E24E000B24157 /* GetPassword1ViewController.m in Sources */,
 				03BEE5041827967800FF4D3E /* DownFontViewController.m in Sources */,
 				03F5BFB6179FA13800B24157 /* ThemeManager.m in Sources */,
@@ -1270,6 +1432,7 @@
 				032C2F4717A7B1D100A50022 /* AFHTTPRequestOperation.m in Sources */,
 				032C2F4817A7B1D100A50022 /* AFImageRequestOperation.m in Sources */,
 				032C2F4917A7B1D100A50022 /* AFJSONRequestOperation.m in Sources */,
+				03AFFDAC183F32E60097D92A /* UIGestureRecognizer+GMGridViewAdditions.m in Sources */,
 				032C2F4A17A7B1D100A50022 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				032C2F4B17A7B1D100A50022 /* AFPropertyListRequestOperation.m in Sources */,
 				032C2F4C17A7B1D100A50022 /* AFURLConnectionOperation.m in Sources */,
@@ -1281,19 +1444,26 @@
 				0379A87817E94D6C006A5725 /* WHMailActivity.m in Sources */,
 				03B61F5A183C5A52004A6A01 /* DDHTextView.m in Sources */,
 				0322790F1828E59E00876CF4 /* LTHNavigationViewController.m in Sources */,
+				03AFFDAD183F32E60097D92A /* UIView+GMGridViewAdditions.m in Sources */,
 				03BEE4FA182787F000FF4D3E /* UMFeedbackTableViewCellRight.m in Sources */,
 				03AB713A17A9F6FB005AC88B /* AboutUsViewController.m in Sources */,
 				03AB714417A9FB3D005AC88B /* NotePadViewController.m in Sources */,
+				03AFFDA9183F32E60097D92A /* GMGridView.m in Sources */,
 				03AB714917A9FDCF005AC88B /* MLNavigationController.m in Sources */,
 				039BF55F17AA2E7700B4D8F4 /* AWActionSheet.m in Sources */,
+				03AFFD86183F32850097D92A /* PPiFlatSegmentedControl.m in Sources */,
+				03AFFD9A183F32CF0097D92A /* UIImage+FontAwesome.m in Sources */,
 				039BF56E17AA3FFC00B4D8F4 /* SwitchCell.m in Sources */,
 				0379A87F17E94D83006A5725 /* WHTextActivity.m in Sources */,
+				03AFFDAA183F32E60097D92A /* GMGridViewCell.m in Sources */,
 				03A6407717AB452C00474BE4 /* UIImage+Rotation.m in Sources */,
 				03A6408A17AB85B400474BE4 /* KGNotePad.m in Sources */,
+				03AFFD83183F327E0097D92A /* SevenSwitch.m in Sources */,
 				030286CE17BA101700904C80 /* NSURL+urlRequest.m in Sources */,
 				030C24F917BB10660003D864 /* KOMovingBarViewController.m in Sources */,
 				030C253D17BC76BB0003D864 /* shadeView.m in Sources */,
 				0393C53A17C35CA800F46FA6 /* KLSwitch.m in Sources */,
+				03AFFD76183F323F0097D92A /* UIToolView.m in Sources */,
 				03D3D32017D41DA000B352B9 /* SwipeGesViewController.m in Sources */,
 				03BEE4F7182787F000FF4D3E /* UMFeedbackViewController.m in Sources */,
 				03825B1D17D7060F00BD59AA /* RMEIdeasPullDownControl.m in Sources */,

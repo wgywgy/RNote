@@ -22,10 +22,13 @@
 
 #import "RMEIdeasPullDownControl.h"
 
+#import "UIToolView.h"
+
 #define kLastSelected @"kLastSelected"
 #define kBrandName @"brandName"
 #define kBrandValue @"brandValue"
 #define kfoundedDate @"foundedDate"
+#define IOS7DIFFHEIGHT ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ? 64 : 0)
 
 typedef enum
 {
@@ -61,12 +64,15 @@ TableSortSortCriteria;
 //    self.Notes = [[NSMutableArray alloc]initWithCapacity:0];
 //    self.view.backgroundColor = [UIColor paperWhiteColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-//    [self setNeedsStatusBarAppearanceUpdate];
+    
+//    UIToolView *tool = [[UIToolView alloc]initWithFrame:
+//                        CGRectMake(0, IOS7DIFFHEIGHT, 320, rect_screen.size.height - IOS7DIFFHEIGHT)];
+//    [self.view addSubview:tool];
+//    tool.segOneArray = [@[@"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h"]mutableCopy];
+//    tool.segTwoArray = [@[@"b"]mutableCopy];
+//    tool.segThreeArray = [@[@"a"]mutableCopy];
 }
 
-//- (UIStatusBarStyle)preferredStatusBarStyle{
-//    return UIStatusBarStyleBlackOpaque;
-//}
 
 - (void)addNoContentViewWithAnimation:(BOOL)animate
 {
@@ -135,15 +141,8 @@ TableSortSortCriteria;
     self.title = NSLocalizedString(@"apptitle", @"");
     rect_screen = [[UIScreen mainScreen]bounds];
     
-//    _listNameArray = [@[
-//                      @"The max length of every cell aaa", @"每个单元格支持的最大长度", @"Earth",
-//                      @"Mars", @"Jupiter", @"Saturn",
-//                      @"Uranus", @"Neptune" ,@"a"
-//                      ] mutableCopy];
     //滚动条偏移
 //    self.myTableView.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
-    
-//    self.myTableView.frame = CGRectMake(0, 100, 320, rect_screen.size.height - 64);
     
     NSString *documentDirectory = [self applicationDocumentsDirectory];
 	NSString *path = [documentDirectory stringByAppendingPathComponent:@"NotesList.plist"];
@@ -158,21 +157,9 @@ TableSortSortCriteria;
     }
     
     //Create an array of titles to display as different functions are selected by the user.
-    self.sortTitlesArray = @[@"Listed from A - Z", @"Listed from Z - A", @"Brand value: HIGHEST - LOWEST", @"Brand value: LOWEST - HIGHEST", @"Founded: OLDEST - NEWEST", @"Founded: NEWEST - OLDEST"];
+//    self.sortTitlesArray = @[@"Listed from A - Z", @"Listed from Z - A", @"Brand value: HIGHEST - LOWEST", @"Brand value: LOWEST - HIGHEST", @"Founded: OLDEST - NEWEST", @"Founded: NEWEST - OLDEST"];
     
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        [self.myTableView setContentOffset:CGPointMake(0, 44)];
-//    }
-//    self.rmeideasPullDownControl = [[RMEIdeasPullDownControl alloc] initWithDataSource:self
-//                                                                              delegate:self
-//                                                                      clientScrollView:self.myTableView];
-    
-//    CGRect originalFrame = self.rmeideasPullDownControl.frame;
-//    self.rmeideasPullDownControl.frame = CGRectMake(0.0, 44.0, originalFrame.size.width, originalFrame.size.height);
-    
-    //It is recommended that the control is placed behind the client scrollView. Remember to make its background transparent.
-//    [self.view insertSubview:self.rmeideasPullDownControl belowSubview:self.myTableView];
-    
+    [self.myTableView setContentOffset:CGPointMake(0, 44)];
 }
 
 - (NSString *)applicationDocumentsDirectory {
@@ -182,33 +169,19 @@ TableSortSortCriteria;
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-//    self.navigationController.navigationBar.frame = CGRectMake(0, 20, 320, 44);
     if (self.Notes.count > 0) {
         noContentView.hidden = YES;
         [self.myTableView reloadData];
         [self configureViews];
     }
     
-//    NSMutableArray *titleArray = [[NSMutableArray alloc]initWithCapacity:0];
-//    for (int i = 1; i <= [self getNotePadID]; i++) {
-//        [titleArray addObject:[self getTitleWithNoteId:i]];
-//    }
-//    NSLog(@"title:%@",titleArray);
-    
-//    self.allItems = self.Notes;
-//     [[self.Notes objectAtIndex:indexPath.row ]objectForKey:@"Text"];
     NSMutableArray *titleArray = [[NSMutableArray alloc]initWithCapacity:0];
     for (int i = 0; i < self.Notes.count; i++) {
         [titleArray addObject:self.Notes[i][@"Text"]];
     }
-    
 
     NSLog(@"%@",self.Notes);
     [self configureTableViewCover:self.myTableView];
-
-    //Tell the control what selection to make. In this case we use NSUserDefaults to save and retrieve last selection made.
-//    [self.rmeideasPullDownControl selectControlAtIndex:
-//     [[NSUserDefaults standardUserDefaults] integerForKey:kLastSelected]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -276,15 +249,6 @@ TableSortSortCriteria;
     }
     
     [self configureButton];
-    
-//    UIImage *backButtonImage = [UIImage imageNamed:@"arrow_back.png"];
-//    backButtonImage = [backButtonImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
-//                                    initWithImage:backButtonImage
-//                                    style:UIBarButtonItemStylePlain
-//                                    target:nil
-//                                    action:nil];
-//    [[self navigationItem] setBackBarButtonItem:backButton];
 }
 
 - (void)toggleEditMode:(id)sender {
@@ -399,14 +363,7 @@ shouldReloadTableForSearchScope:(NSInteger)searchOption {
     
     cell.detailTextLabel.textAlignment = NSTextAlignmentLeft;
     [self configureTableViewCell:cell];
-//
-////    return cell;
-//
-//    UIView * subview = [[XXView alloc] init];
-//    subview.userInteractionEnabled = NO;// 不设为NO会屏蔽cell的点击事件
-//    subview.backgroundColor = [UIColor clearColor];// 设为透明从而使得cell.backgroundColor有效.
-//    subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    [cell.contentView addSubview:subview];// cell.contentView是个readonly属性,所以别想着替换contentView了.
+
     return cell;
 }
 
@@ -466,13 +423,9 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     NSUInteger toRow = [destinationIndexPath row];
     id object = self.Notes[fromRow];
     [self.Notes removeObjectAtIndex:fromRow];
-//    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:sourceIndexPath]
-//                     withRowAnimation:UITableViewRowAnimationFade];
+
     [self.Notes insertObject:object atIndex:toRow];
     
-    //id object = [self.list objectAtIndex:fromRow];
-    //[self.list removeObjectAtIndex:fromRow];
-    //[self.list insertObject:object atIndex:toRow];
 }
 
 -  (void)tableView:(UITableView *)tableView
@@ -672,12 +625,11 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (void)configureNoContentView
 {
+    noContentView.backgroundColor = [UIColor tableViewBackgroundColor];
     if( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ) {
-        noContentView.backgroundColor = [UIColor tableViewDrakBackgroundColor];
         sorry.textColor = [UIColor fontNightWhiteColor];
         sadFace.textColor = [UIColor fontNightWhiteColor];
     } else {
-        noContentView.backgroundColor = [UIColor tableViewBackgroundColor];
         sorry.textColor = [UIColor fontBlackColor];
         sadFace.textColor = [UIColor fontBlackColor];
     }
@@ -685,15 +637,10 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 - (void)configureTableViewCell:(UITableViewCell *)aCell
 {
-
     if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )
     {
         aCell.textLabel.textColor = [UIColor fontBlackColor];
-//        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-//            aCell.detailTextLabel.textColor = [UIColor colorWithRed:0.435 green:0.725 blue:1.000 alpha:1.0];
-//        } else {
-            aCell.detailTextLabel.textColor = [UIColor blueNavigationColor];
-//        }
+        aCell.detailTextLabel.textColor = [UIColor blueNavigationColor];
 
         aCell.backgroundColor = [UIColor clearColor];
     }
@@ -712,7 +659,6 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 
         aCell.backgroundColor = [UIColor paperDarkGrayColor];
     }
-
 }
 
 - (void)configureButton
@@ -800,20 +746,6 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     }
 }
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
-//    [sectionView setBackgroundColor:[UIColor paperWhiteColor]];
-//    
-//    //增加UILabel
-//    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 18)];
-//    [dateLabel setTextColor:[UIColor blackColor]];
-//    [dateLabel setBackgroundColor:[UIColor clearColor]];
-//    dateLabel.text = @"2012年 3月";
-//    dateLabel.textAlignment = NSTextAlignmentCenter;
-//
-//    [sectionView addSubview:dateLabel];
-//    return sectionView;  
-//}
 
 - (void)scrollToTopAnimated:(BOOL)animated {
 	[self.myTableView setContentOffset:CGPointMake(0.0f, 0.0f) animated:animated];
@@ -821,98 +753,10 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 -(void) applicationWillTerminate: (NSNotification *)notification {
 	
-//	NSLog(@"got app will terminate");
 	NSString *documentDirectory = [self applicationDocumentsDirectory];
 	NSString *path = [documentDirectory stringByAppendingPathComponent:@"NotesList.plist"];
 	
 	[self.Notes writeToFile:path atomically:YES];
-}
-
-#pragma mark - RMEIdeasePullDownControl DataSource and Delegate methods
-//- (void) rmeIdeasPullDownControl:(RMEIdeasPullDownControl*)rmeIdeasPullDownControl
-//          selectedControlAtIndex:(NSUInteger)controlIndex
-//{
-//    NSSortDescriptor *sortDescriptor = nil;
-//    NSArray *sortDescriptors = nil;
-//    
-//    switch (controlIndex)
-//    {
-//        case AtoZ:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kBrandName ascending:YES];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        case ZtoA:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kBrandName ascending:NO];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        case HighestToLowest:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kBrandValue ascending:NO];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        case LowestToHighest:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kBrandValue ascending:YES];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        case OldestToNewest:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kfoundedDate ascending:YES];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        case NewestToOldest:
-//            sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kfoundedDate ascending:NO];
-//            sortDescriptors = @[sortDescriptor];
-//            break;
-//            
-//        default:
-//            break;
-//    }
-////    [self.myTableView setContentOffset:CGPointMake(0, -44)];
-////    self.Notes = [self.Notes sortedArrayUsingDescriptors:sortDescriptors];
-//    [self.myTableView reloadData];
-//    
-//}
-
-- (NSUInteger) numberOfButtonsRequired:(RMEIdeasPullDownControl*)rmeIdeasPullDownControl
-{
-    return 6;
-}
-
-- (UIImage*)rmeIdeasPullDownControl:(RMEIdeasPullDownControl*)rmeIdeasPullDownControl
-             imageForControlAtIndex:(NSUInteger)controlIndex
-{
-    UIImage *image0 = [UIImage imageNamed:@"SortAZ.png"];
-    UIImage *image1 = [UIImage imageNamed:@"SortZA.png"];
-    UIImage *image2 = [UIImage imageNamed:@"HighLow.png"];
-    UIImage *image3 = [UIImage imageNamed:@"LowHigh.png"];
-    UIImage *image4 = [UIImage imageNamed:@"OldNew.png"];
-    UIImage *image5 = [UIImage imageNamed:@"NewOld.png"];
-    
-    NSArray *imagesArray = @[image0, image1, image2, image3, image4, image5];
-    return imagesArray[controlIndex];
-}
-
-- (UIImage*)rmeIdeasPullDownControl:(RMEIdeasPullDownControl*)rmeIdeasPullDownControl
-     selectedImageForControlAtIndex:(NSUInteger)controlIndex
-{
-    UIImage *image0 = [UIImage imageNamed:@"SortAZSelected.png"];
-    UIImage *image1 = [UIImage imageNamed:@"SortZASelected.png"];
-    UIImage *image2 = [UIImage imageNamed:@"HighLowSelected.png"];
-    UIImage *image3 = [UIImage imageNamed:@"LowHighSelected.png"];
-    UIImage *image4 = [UIImage imageNamed:@"OldNewSelected.png"];
-    UIImage *image5 = [UIImage imageNamed:@"NewOldSelected.png"];
-    
-    NSArray *imagesArray = @[image0, image1, image2, image3, image4, image5];
-    return imagesArray[controlIndex];
-}
-
-- (NSString*)rmeIdeasPullDownControl:(RMEIdeasPullDownControl*)rmeIdeasPullDownControl
-              titleForControlAtIndex:(NSUInteger)controlIndex
-{
-    return self.sortTitlesArray[controlIndex];
 }
 
 @end

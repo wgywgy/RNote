@@ -95,6 +95,8 @@
     
     notePad.textView.delegate = self;
     
+
+    
 //    self.scrollForHideNavigation = notePad.textView;
 //    [notePad.textView setContentOffset:CGPointMake(0, -43)];
 //    self.notePad.textView.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
@@ -125,11 +127,14 @@
     [popView setAlpha:0.f];
     
     [self regitserAsObserver];
+ 
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
+    if (notePad.textView.text.length <= 0) {
+        [notePad.textView becomeFirstResponder];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -316,17 +321,10 @@
         //     没有边框
         backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 11, 18)];
 
-//        [backBtn setBackgroundImage:[UIImage imageNamed:@"UI7NavigationBarBackButton"]
-//                           forState:UIControlStateNormal];
         [backBtn setImage:[UIImage imageNamed:@"Toolbar_back"]
                  forState:UIControlStateNormal];
-//        [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
     } else {
         backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 18)];
-
-//        [backBtn setBackgroundImage:[[UIImage imageNamed:@"NavigationButtonBG"]
-//                                     resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)]
-//                           forState:UIControlStateNormal];
     }
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
@@ -335,8 +333,6 @@
       forControlEvents:UIControlEventTouchUpInside];
     [self configureBackViewBtn:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
-    
-
 }
 
 - (void)configureBackViewBtn:(UIButton *)aBtn
@@ -359,8 +355,10 @@
 {
     if( [[[ThemeManager sharedInstance] theme] isEqual:kThemeBlack] )
     {
+        self.notePad.textView.keyboardAppearance = UIKeyboardAppearanceAlert;
         [self showKeyboardBackground:NO];
     } else {
+        self.notePad.textView.keyboardAppearance = UIKeyboardAppearanceDefault;
         [self showKeyboardBackground:YES];
     }
 }

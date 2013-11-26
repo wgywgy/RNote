@@ -13,12 +13,21 @@
 @implementation UIColor (NoteAdditions)
 
 + (UIColor *)tableViewBackgroundColor {
-    return [UIColor colorWithPatternImage:[UIImage imageNamed:@"messages_tableview_background"] ];
-}
+    if ([[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack]) {
+        static UIColor *darkTableBgColor = nil;
+        if (!darkTableBgColor)
+            darkTableBgColor =
+            [UIColor colorWithPatternImage:[[UIImage imageNamed:@"messages_tableview_background"]
+                                            imageWithGradientTintColor:[UIColor tableViewDarkBackgroundColor]]];
 
-+ (UIColor *)tableViewDrakBackgroundColor {
-    return [UIColor colorWithPatternImage:[[UIImage imageNamed:@"messages_tableview_background"]
-                                           imageWithGradientTintColor:[UIColor tableViewDarkBackgroundColor]]];
+        return darkTableBgColor;
+    } else {
+        static UIColor *lightTableBgColor = nil;
+        if (!lightTableBgColor)
+            lightTableBgColor =
+            [UIColor colorWithPatternImage:[UIImage imageNamed:@"messages_tableview_background"]];
+        return lightTableBgColor;
+    }
 }
 
 + (UIColor *)tableViewDarkBackgroundColor
@@ -90,5 +99,17 @@
 
 + (UIColor *)redNavigationColor {
     return [UIColor colorWithRed:0.663 green:0.078 blue:0.000 alpha:1.0];
+}
+
++ (UIColor *)titleTextColor {
+    if ([[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack]) {
+        static UIColor *lightTitleTextColor = nil;
+        if (!lightTitleTextColor) lightTitleTextColor = [UIColor blackColor];
+        return lightTitleTextColor;
+    } else {
+        static UIColor *darkTitleTextColor = nil;
+        if (!darkTitleTextColor) darkTitleTextColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+        return darkTitleTextColor;
+    }
 }
 @end
