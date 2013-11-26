@@ -11,9 +11,10 @@
 #import "UIColor+NoteAdditions.h"
 #import "UIImage+FontAwesome.h"
 #import "FAImageView.h"
+#import "NSString+FontAwesome.h"
 
-#define appleID @"530096786"
-
+#define appleID 530096786
+static NSArray * kFontAwesomeStrings;
 @interface AboutUsViewController ()
 
 @end
@@ -76,11 +77,6 @@
 //                                      andSize:CGSizeMake(32, 32)];
 //    [self.rateBtn setImage:imageView.image
 //                  forState:UIControlStateNormal];
-    
-    //初始化控制器
-    self.storeProductViewContorller = [[SKStoreProductViewController alloc] init];
-    //设置代理请求为当前控制器本身
-    self.storeProductViewContorller.delegate = self;
 }
 
 - (void)returnHelpCenter:(id)sender
@@ -115,7 +111,9 @@
 }
 
 - (IBAction)rate:(id)sender {
-    [self evaluate];
+    //跳转到评价页面
+    NSString *url = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",appleID];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,26 +122,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - SKStoreProductViewControllerDelegate -
-- (void)evaluate{
-
-    //加载一个新的视图展示
-    [self.storeProductViewContorller loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier : appleID}
-                                          completionBlock:^(BOOL result, NSError *error) {
-                                              //block回调
-//                                              if (result) {
-                                                  [self presentViewController:self.storeProductViewContorller
-                                                                     animated:YES
-                                                                   completion:nil];
-//                                              } else {
-//                                              }
-    }];
-}
-
-//取消按钮监听
-- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController{
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
 @end

@@ -184,10 +184,10 @@
             if (indexPath.row == 0) {
                 //无箭头
             } else {
-                UIImage *accessoryImg = [[UIImage imageNamed:@"hideKeyboard.png"]
+                UIImage *accessoryImg = [[UIImage imageNamed:@"listArrow.png"]
                                         imageWithTintColor:[UIColor fontNightWhiteColor]];
-                accessoryImg = [UIImage image:accessoryImg rotation:UIImageOrientationLeft];
                 cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
+
             }
         } else {
             cell.imageView.image = [UIImage imageNamed:_picName[indexPath.row]];
@@ -196,9 +196,7 @@
             if (indexPath.row == 0) {
                 //无箭头
             } else {
-                UIImage *accessoryImg = [[UIImage imageNamed:@"hideKeyboard.png"]
-                                         imageWithTintColor:[UIColor btnGrayColor]];
-                accessoryImg = [UIImage image:accessoryImg rotation:UIImageOrientationLeft];
+                UIImage *accessoryImg = [UIImage imageNamed:@"listArrow.png"];
                 cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
             }
         }
@@ -211,17 +209,14 @@
                                     imageWithTintColor:[UIColor btnGrayColor]];
             cell.textLabel.textColor = [UIColor fontNightWhiteColor];
             cell.backgroundColor = [UIColor paperDarkGrayColor];
-            UIImage *accessoryImg = [[UIImage imageNamed:@"hideKeyboard.png"]
+            UIImage *accessoryImg = [[UIImage imageNamed:@"listArrow.png"]
                                      imageWithTintColor:[UIColor fontNightWhiteColor]];
-            accessoryImg = [UIImage image:accessoryImg rotation:UIImageOrientationLeft];
             cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
         } else {
             cell.imageView.image = [UIImage imageNamed:_picName[indexPath.row +4]];
             cell.textLabel.textColor = [UIColor fontBlackColor];
             cell.backgroundColor = [UIColor paperWhiteColor];
-            UIImage *accessoryImg = [[UIImage imageNamed:@"hideKeyboard.png"]
-                                     imageWithTintColor:[UIColor btnGrayColor]];
-            accessoryImg = [UIImage image:accessoryImg rotation:UIImageOrientationLeft];
+            UIImage *accessoryImg = [UIImage imageNamed:@"listArrow.png"];
             cell.accessoryView = [[UIImageView alloc]initWithImage:accessoryImg];
         }
         
@@ -257,7 +252,7 @@
             case 1:
                 [LTHPasscodeViewController sharedUser].delegate = self;
                 
-                if ([LTHPasscodeViewController passcodeExistsInKeychain]) {
+                if ([LTHPasscodeViewController passcodeExistsInKeychain ]) {
                     [[LTHPasscodeViewController sharedUser] showForChangingPasscodeInViewController: self];
                 }
                 break;

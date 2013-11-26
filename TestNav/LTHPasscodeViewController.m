@@ -44,7 +44,8 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 // Backgrounds
 #import "UIColor+NoteAdditions.h"
 #define kEnterPasscodeLabelBackgroundColor [UIColor clearColor]
-#define kBackgroundColor  [UIColor paperWhiteColor]
+#define kBackgroundColor ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ? \
+                            [UIColor paperDarkGrayColor] : [UIColor paperWhiteColor])
 #define kCoverViewBackgroundColor [UIColor colorWithRed:0.97f green:0.97f blue:1.0f alpha:1.00f]
 #define kPasscodeBackgroundColor [UIColor clearColor]
 #define kFailedAttemptLabelBackgroundColor [UIColor colorWithRed:0.8f green:0.1f blue:0.2f alpha:1.000f]
@@ -52,8 +53,10 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 #define kLabelFont (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? [UIFont fontWithName: @"AvenirNext-Regular" size: kLabelFontSize * kFontSizeModifier] : [UIFont fontWithName: @"AvenirNext-Regular" size: kLabelFontSize])
 #define kPasscodeFont (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? [UIFont fontWithName: @"AvenirNext-Regular" size: kPasscodeFontSize * kFontSizeModifier] : [UIFont fontWithName: @"AvenirNext-Regular" size: kPasscodeFontSize])
 // Text Colors
-#define kLabelTextColor [UIColor colorWithWhite:0.31f alpha:1.0f]
-#define kPasscodeTextColor [UIColor colorWithWhite:0.31f alpha:1.0f]
+#define kLabelTextColor ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ? \
+                            [UIColor fontNightWhiteColor] : [UIColor colorWithWhite:0.31f alpha:1.0f])
+#define kPasscodeTextColor ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlack] ? \
+                            [UIColor fontNightWhiteColor] : [UIColor colorWithWhite:0.31f alpha:1.0f]) 
 #define kFailedAttemptLabelTextColor [UIColor whiteColor]
 #define IOS7DIFFWIDTH ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7 ? 23 : 43)
 @implementation LTHPasscodeViewController
@@ -102,7 +105,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+//    NSLog(@"theme:%@", [[ThemeManager sharedInstance] theme]);
 	self.view.backgroundColor = kBackgroundColor;
 	if (!_beingDisplayedAsLockscreen) {
         [self setCancelButton];
@@ -534,8 +537,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
         if ( [[[ThemeManager sharedInstance] theme] isEqual: kThemeBlue] )
             self.navigationController.navigationBar.barTintColor =
             [UIColor colorWithRed:0.048 green:0.539 blue:1.000 alpha:1.0];
-        
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
         if ( [[[ThemeManager sharedInstance] theme] isEqual:kThemeRed]) {
             self.navigationController.navigationBar.barTintColor =
             [UIColor redColor];
@@ -552,6 +554,7 @@ static CGFloat const kSlideAnimationDuration = 0.15f;
         [self.navigationController.navigationBar setBackgroundImage:ThemeImage(@"header_bg")
                                                       forBarMetrics:UIBarMetricsDefault];
     }
+    self.view.backgroundColor = kBackgroundColor;
 }
 
 - (void)showForEnablingPasscodeInViewController:(UIViewController *)viewController {

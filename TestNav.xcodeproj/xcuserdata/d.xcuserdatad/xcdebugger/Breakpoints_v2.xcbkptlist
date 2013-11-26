@@ -41,12 +41,12 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.719757"
+                  timestampString = "407138141.326862"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "383"
                   endingLineNumber = "383"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "54">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -55,26 +55,12 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.720132"
+                  timestampString = "407138141.327228"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "383"
                   endingLineNumber = "383"
-                  offsetFromSymbolStart = "1431">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
-                  moduleName = "TestNav"
-                  urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.720435"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "383"
-                  endingLineNumber = "383"
-                  offsetFromSymbolStart = "1476">
+                  offsetFromSymbolStart = "1132">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -101,12 +87,12 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.720748"
+                  timestampString = "407138141.327501"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
                   endingLineNumber = "388"
-                  offsetFromSymbolStart = "203">
+                  offsetFromSymbolStart = "174">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +101,12 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.721012"
+                  timestampString = "407138141.327696"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
                   endingLineNumber = "388"
-                  offsetFromSymbolStart = "468">
+                  offsetFromSymbolStart = "380">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -129,12 +115,12 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.721286"
+                  timestampString = "407138141.327866"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
                   endingLineNumber = "388"
-                  offsetFromSymbolStart = "1503">
+                  offsetFromSymbolStart = "1190">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -143,12 +129,26 @@
                   symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
                   moduleName = "TestNav"
                   urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
-                  timestampString = "407125881.72156"
+                  timestampString = "407138141.328061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "388"
                   endingLineNumber = "388"
-                  offsetFromSymbolStart = "1547">
+                  offsetFromSymbolStart = "1240">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GetPassword1ViewController zoomPasswordBackgroudWithTag:]"
+                  moduleName = "TestNav"
+                  urlString = "file:///Users/d/Desktop/RNote/TestNav/GetPassword1ViewController.m"
+                  timestampString = "407138141.328245"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
+                  offsetFromSymbolStart = "1434">
                </Location>
             </Locations>
          </BreakpointContent>
